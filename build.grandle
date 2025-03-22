@@ -1,0 +1,33 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
+plugins {
+    id 'java'
+    id 'org.jetbrains.kotlin.jvm' version '1.6.10'
+    id 'application'
+}
+
+
+application {
+    mainClass = 'com.android.ide.common.generate.locale.LocaleTableGenerator'
+    applicationName = "generate-locale-data"
+}
+
+group 'generate-locale-data'
+version '1.0'
+
+repositories {
+    google()
+    mavenCentral()
+    gradlePluginPortal()
+}
+
+dependencies {
+    implementation 'com.google.guava:guava:33.3.1-jre'
+    implementation 'com.ibm.icu:icu4j:71.1'
+}
