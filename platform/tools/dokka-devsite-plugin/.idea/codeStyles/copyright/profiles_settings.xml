@@ -1,0 +1,7 @@
+<component name="CopyrightManager">
+  <settings default="AndroidCopyright">
+    <module2copyright>
+      <element module="All" copyright="AndroidCopyright" />
+    </module2copyright>
+  </settings>
+</component>
