@@ -19,9 +19,6 @@ on:
   schedule:
     - cron: '36 10 * * 1"
 
-  schedule:
-  - cron: "0 2 * * 1-5"
-  
 jobs:
   analyze:
     name: Analyze (${{ matrix.language }})
