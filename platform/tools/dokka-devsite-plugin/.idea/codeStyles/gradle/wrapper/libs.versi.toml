@@ -1,0 +1,26 @@
+[versions]
+coroutines = "1.6.3"
+dokkaVersion = "2.0.20-dev-337"
+jackson = "2.15.0"
+kotlin = "2.1.10"
+
+[libraries]
+coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm", version.ref = "coroutines" }
+coroutines-guava = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-guava", version.ref = "coroutines" }
+coroutines-rx2 = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-rx2", version.ref = "coroutines" }
+coroutines-rx3 = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-rx3", version.ref = "coroutines" }
+dokka-analysis-api = { module = "org.jetbrains.dokka:analysis-kotlin-api", version.ref = "dokkaVersion" }
+dokka-analysis-descriptors = { module = "org.jetbrains.dokka:analysis-kotlin-descriptors", version.ref = "dokkaVersion" }
+dokka-base = { module = "org.jetbrains.dokka:dokka-base", version.ref = "dokkaVersion" }
+dokka-base-test-utils = { module = "org.jetbrains.dokka:dokka-base-test-utils", version.ref = "dokkaVersion" }
+dokka-cli = { module = "org.jetbrains.dokka:dokka-cli", version.ref = "dokkaVersion" }
+dokka-core = { module = "org.jetbrains.dokka:dokka-core", version.ref = "dokkaVersion" }
+dokka-test-api = { module = "org.jetbrains.dokka:dokka-test-api", version.ref = "dokkaVersion" }
+jackson-dataformat-xml = { module = "com.fasterxml.jackson.dataformat:jackson-dataformat-xml", version.ref = "jackson" }
+jackson-module-kotlin = { module = "com.fasterxml.jackson.module:jackson-module-kotlin", version.ref = "jackson" }
+kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "kotlin" }
+kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
+
+[plugins]
+kotlin = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+shadow = { id = "com.github.johnrengelman.shadow", version = "8.1.1" }
