@@ -1,0 +1,229 @@
+<html devsite="true">
+  <head>
+    <title>CombinedLoadStates</title>
+{% setvar book_path %}/reference/kotlin/androidx/_book.yaml{% endsetvar %}
+{% include "_shared/_reference-head-tags.html" %}
+  </head>
+  <body>
+    <div itemscope="" itemtype="http://developers.google.com/ReferenceObject">
+      <meta itemprop="name" content="CombinedLoadStates">
+      <meta itemprop="path" content="androidx.paging">
+      <meta itemprop="property" content="equals(kotlin.Any)">
+      <meta itemprop="property" content="hashCode()">
+      <meta itemprop="property" content="toString()">
+      <meta itemprop="property" content="append()">
+      <meta itemprop="property" content="mediator()">
+      <meta itemprop="property" content="prepend()">
+      <meta itemprop="property" content="refresh()">
+      <meta itemprop="property" content="source()">
+      <meta itemprop="language" content="KOTLIN">
+    </div>
+    <div id="header-block">
+      <div>
+        <h1>CombinedLoadStates</h1>
+      </div>
+    </div>
+
+{% setvar page_path %}androidx/paging/CombinedLoadStates.html{% endsetvar %}
+{% setvar can_switch %}1{% endsetvar %}
+{% include "reference/_kotlin_switcher2.md" %}
+    <p>
+      <pre>class <a href="/reference/kotlin/androidx/paging/CombinedLoadStates.html">CombinedLoadStates</a></pre>
+    </p>
+    <hr>
+    <p>Collection of pagination LoadStates for both a PagingSource, and RemoteMediator.</p>
+    <h2>Summary</h2>
+    <div class="devsite-table-wrapper">
+      <table class="responsive">
+        <colgroup>
+          <col width="40%">
+          <col>
+        </colgroup>
+        <thead>
+          <tr>
+            <th colspan="100%"><h3>Public constructors</h3></th>
+          </tr>
+        </thead>
+        <tbody class="list">
+          <tr>
+            <td>
+              <div><code><a href="/reference/kotlin/androidx/paging/CombinedLoadStates.html#CombinedLoadStates([Error type: Unresolved type for LoadState],[Error type: Unresolved type for LoadState],[Error type: Unresolved type for LoadState],[Error type: Unresolved type for LoadStates],[Error type: Unresolved type for LoadStates])">CombinedLoadStates</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;refresh:&nbsp;<a href="/reference/kotlin/[JVM root]/&lt;Error class: unknown class&gt;.html">&lt;Error class: unknown class&gt;</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;prepend:&nbsp;<a href="/reference/kotlin/[JVM root]/&lt;Error class: unknown class&gt;.html">&lt;Error class: unknown class&gt;</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;append:&nbsp;<a href="/reference/kotlin/[JVM root]/&lt;Error class: unknown class&gt;.html">&lt;Error class: unknown class&gt;</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;source:&nbsp;<a href="/reference/kotlin/[JVM root]/&lt;Error class: unknown class&gt;.html">&lt;Error class: unknown class&gt;</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;mediator:&nbsp;<a href="/reference/kotlin/[JVM root]/&lt;Error class: unknown class&gt;.html">&lt;Error class: unknown class&gt;</a>?<br>)</code></div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="devsite-table-wrapper">
+      <table class="responsive">
+        <colgroup>
+          <col width="40%">
+          <col>
+        </colgroup>
+        <thead>
+          <tr>
+            <th colspan="100%"><h3>Public functions</h3></th>
+          </tr>
+        </thead>
+        <tbody class="list">
+          <tr>
+            <td><code>open&nbsp;operator <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></code></td>
+            <td>
+              <div><code><a href="/reference/kotlin/androidx/paging/CombinedLoadStates.html#equals(kotlin.Any)">equals</a>(other:&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a>?)</code></div>
+            </td>
+          </tr>
+          <tr>
+            <td><code>open <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></code></td>
+            <td>
+              <div><code><a href="/reference/kotlin/androidx/paging/CombinedLoadStates.html#hashCode()">hashCode</a>()</code></div>
+            </td>
+          </tr>
+          <tr>
+            <td><code>open <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></code></td>
+            <td>
+              <div><code><a href="/reference/kotlin/androidx/paging/CombinedLoadStates.html#toString()">toString</a>()</code></div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="devsite-table-wrapper">
+      <table class="responsive">
+        <colgroup>
+          <col width="40%">
+          <col>
+        </colgroup>
+        <thead>
+          <tr>
+            <th colspan="100%"><h3>Public properties</h3></th>
+          </tr>
+        </thead>
+        <tbody class="list">
+          <tr>
+            <td><code><a href="/reference/kotlin/[JVM root]/&lt;Error class: unknown class&gt;.html">&lt;Error class: unknown class&gt;</a></code></td>
+            <td>
+              <div><code><a href="/reference/kotlin/androidx/paging/CombinedLoadStates.html#append()">append</a></code></div>
+              <p>Convenience for combined behavior of LoadType.REFRESH LoadState, which generally defers to <code><a href="/reference/kotlin/androidx/paging/CombinedLoadStates.html#mediator()">mediator</a></code> if it exists, but if previously was LoadState.Loading, awaits for both <code><a href="/reference/kotlin/androidx/paging/CombinedLoadStates.html#source()">source</a></code> and <code><a href="/reference/kotlin/androidx/paging/CombinedLoadStates.html#mediator()">mediator</a></code> to become LoadState.NotLoading to ensure the remote load was applied.</p>
+            </td>
+          </tr>
+          <tr>
+            <td><code><a href="/reference/kotlin/[JVM root]/&lt;Error class: unknown class&gt;.html">&lt;Error class: unknown class&gt;</a>?</code></td>
+            <td>
+              <div><code><a href="/reference/kotlin/androidx/paging/CombinedLoadStates.html#mediator()">mediator</a></code></div>
+              <p>LoadStates corresponding to loads from a RemoteMediator, or <code>null</code> if RemoteMediator not present.</p>
+            </td>
+          </tr>
+          <tr>
+            <td><code><a href="/reference/kotlin/[JVM root]/&lt;Error class: unknown class&gt;.html">&lt;Error class: unknown class&gt;</a></code></td>
+            <td>
+              <div><code><a href="/reference/kotlin/androidx/paging/CombinedLoadStates.html#prepend()">prepend</a></code></div>
+              <p>Convenience for combined behavior of LoadType.REFRESH LoadState, which generally defers to <code><a href="/reference/kotlin/androidx/paging/CombinedLoadStates.html#mediator()">mediator</a></code> if it exists, but if previously was LoadState.Loading, awaits for both <code><a href="/reference/kotlin/androidx/paging/CombinedLoadStates.html#source()">source</a></code> and <code><a href="/reference/kotlin/androidx/paging/CombinedLoadStates.html#mediator()">mediator</a></code> to become LoadState.NotLoading to ensure the remote load was applied.</p>
+            </td>
+          </tr>
+          <tr>
+            <td><code><a href="/reference/kotlin/[JVM root]/&lt;Error class: unknown class&gt;.html">&lt;Error class: unknown class&gt;</a></code></td>
+            <td>
+              <div><code><a href="/reference/kotlin/androidx/paging/CombinedLoadStates.html#refresh()">refresh</a></code></div>
+              <p>Convenience for combined behavior of LoadType.REFRESH LoadState, which generally defers to <code><a href="/reference/kotlin/androidx/paging/CombinedLoadStates.html#mediator()">mediator</a></code> if it exists, but if previously was LoadState.Loading, awaits for both <code><a href="/reference/kotlin/androidx/paging/CombinedLoadStates.html#source()">source</a></code> and <code><a href="/reference/kotlin/androidx/paging/CombinedLoadStates.html#mediator()">mediator</a></code> to become LoadState.NotLoading to ensure the remote load was applied.</p>
+            </td>
+          </tr>
+          <tr>
+            <td><code><a href="/reference/kotlin/[JVM root]/&lt;Error class: unknown class&gt;.html">&lt;Error class: unknown class&gt;</a></code></td>
+            <td>
+              <div><code><a href="/reference/kotlin/androidx/paging/CombinedLoadStates.html#source()">source</a></code></div>
+              <p>LoadStates corresponding to loads from a PagingSource.</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="list">
+      <h2>Public constructors</h2>
+      <div class="api-item"><a name="CombinedLoadStates([Error type: Unresolved type for LoadState], [Error type: Unresolved type for LoadState], [Error type: Unresolved type for LoadState], [Error type: Unresolved type for LoadStates], [Error type: Unresolved type for LoadStates])"></a><a name="CombinedLoadStates-[Error type: Unresolved type for LoadState]-[Error type: Unresolved type for LoadState]-[Error type: Unresolved type for LoadState]-[Error type: Unresolved type for LoadStates]-[Error type: Unresolved type for LoadStates]-"></a><a name="combinedloadstates"></a>
+        <div class="api-name-block">
+          <div>
+            <h3 id="CombinedLoadStates([Error type: Unresolved type for LoadState],[Error type: Unresolved type for LoadState],[Error type: Unresolved type for LoadState],[Error type: Unresolved type for LoadStates],[Error type: Unresolved type for LoadStates])">CombinedLoadStates</h3>
+          </div>
+        </div>
+        <pre class="api-signature no-pretty-print"><a href="/reference/kotlin/androidx/paging/CombinedLoadStates.html#CombinedLoadStates([Error type: Unresolved type for LoadState],[Error type: Unresolved type for LoadState],[Error type: Unresolved type for LoadState],[Error type: Unresolved type for LoadStates],[Error type: Unresolved type for LoadStates])">CombinedLoadStates</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;refresh:&nbsp;<a href="/reference/kotlin/[JVM root]/&lt;Error class: unknown class&gt;.html">&lt;Error class: unknown class&gt;</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;prepend:&nbsp;<a href="/reference/kotlin/[JVM root]/&lt;Error class: unknown class&gt;.html">&lt;Error class: unknown class&gt;</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;append:&nbsp;<a href="/reference/kotlin/[JVM root]/&lt;Error class: unknown class&gt;.html">&lt;Error class: unknown class&gt;</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;source:&nbsp;<a href="/reference/kotlin/[JVM root]/&lt;Error class: unknown class&gt;.html">&lt;Error class: unknown class&gt;</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;mediator:&nbsp;<a href="/reference/kotlin/[JVM root]/&lt;Error class: unknown class&gt;.html">&lt;Error class: unknown class&gt;</a>? = null<br>)</pre>
+      </div>
+    </div>
+    <div class="list">
+      <h2>Public functions</h2>
+      <div class="api-item"><a name="equals-kotlin.Any-"></a><a name="equals"></a>
+        <div class="api-name-block">
+          <div>
+            <h3 id="equals(kotlin.Any)">equals</h3>
+          </div>
+        </div>
+        <pre class="api-signature no-pretty-print">open&nbsp;operator&nbsp;fun&nbsp;<a href="/reference/kotlin/androidx/paging/CombinedLoadStates.html#equals(kotlin.Any)">equals</a>(other:&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a>?):&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></pre>
+      </div>
+      <div class="api-item"><a name="hashCode--"></a><a name="hashcode"></a>
+        <div class="api-name-block">
+          <div>
+            <h3 id="hashCode()">hashCode</h3>
+          </div>
+        </div>
+        <pre class="api-signature no-pretty-print">open&nbsp;fun&nbsp;<a href="/reference/kotlin/androidx/paging/CombinedLoadStates.html#hashCode()">hashCode</a>():&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></pre>
+      </div>
+      <div class="api-item"><a name="toString--"></a><a name="tostring"></a>
+        <div class="api-name-block">
+          <div>
+            <h3 id="toString()">toString</h3>
+          </div>
+        </div>
+        <pre class="api-signature no-pretty-print">open&nbsp;fun&nbsp;<a href="/reference/kotlin/androidx/paging/CombinedLoadStates.html#toString()">toString</a>():&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></pre>
+      </div>
+    </div>
+    <div class="list">
+      <h2>Public properties</h2>
+      <div class="api-item"><a name="getAppend()"></a><a name="setAppend()"></a><a name="getAppend--"></a><a name="setAppend--"></a>
+        <div class="api-name-block">
+          <div>
+            <h3 id="append()">append</h3>
+          </div>
+        </div>
+        <pre class="api-signature no-pretty-print">val&nbsp;<a href="/reference/kotlin/androidx/paging/CombinedLoadStates.html#append()">append</a>:&nbsp;<a href="/reference/kotlin/[JVM root]/&lt;Error class: unknown class&gt;.html">&lt;Error class: unknown class&gt;</a></pre>
+        <p>Convenience for combined behavior of LoadType.REFRESH LoadState, which generally defers to <code><a href="/reference/kotlin/androidx/paging/CombinedLoadStates.html#mediator()">mediator</a></code> if it exists, but if previously was LoadState.Loading, awaits for both <code><a href="/reference/kotlin/androidx/paging/CombinedLoadStates.html#source()">source</a></code> and <code><a href="/reference/kotlin/androidx/paging/CombinedLoadStates.html#mediator()">mediator</a></code> to become LoadState.NotLoading to ensure the remote load was applied.</p>
+        <p>For use cases that require reacting to LoadState of <code><a href="/reference/kotlin/androidx/paging/CombinedLoadStates.html#source()">source</a></code> and <code><a href="/reference/kotlin/androidx/paging/CombinedLoadStates.html#mediator()">mediator</a></code> specifically, e.g., showing cached data when network loads via <code><a href="/reference/kotlin/androidx/paging/CombinedLoadStates.html#mediator()">mediator</a></code> fail, LoadStates exposed via <code><a href="/reference/kotlin/androidx/paging/CombinedLoadStates.html#source()">source</a></code> and <code><a href="/reference/kotlin/androidx/paging/CombinedLoadStates.html#mediator()">mediator</a></code> should be used directly.</p>
+      </div>
+      <div class="api-item"><a name="getMediator()"></a><a name="setMediator()"></a><a name="getMediator--"></a><a name="setMediator--"></a>
+        <div class="api-name-block">
+          <div>
+            <h3 id="mediator()">mediator</h3>
+          </div>
+        </div>
+        <pre class="api-signature no-pretty-print">val&nbsp;<a href="/reference/kotlin/androidx/paging/CombinedLoadStates.html#mediator()">mediator</a>:&nbsp;<a href="/reference/kotlin/[JVM root]/&lt;Error class: unknown class&gt;.html">&lt;Error class: unknown class&gt;</a>?</pre>
+        <p>LoadStates corresponding to loads from a RemoteMediator, or <code>null</code> if RemoteMediator not present.</p>
+      </div>
+      <div class="api-item"><a name="getPrepend()"></a><a name="setPrepend()"></a><a name="getPrepend--"></a><a name="setPrepend--"></a>
+        <div class="api-name-block">
+          <div>
+            <h3 id="prepend()">prepend</h3>
+          </div>
+        </div>
+        <pre class="api-signature no-pretty-print">val&nbsp;<a href="/reference/kotlin/androidx/paging/CombinedLoadStates.html#prepend()">prepend</a>:&nbsp;<a href="/reference/kotlin/[JVM root]/&lt;Error class: unknown class&gt;.html">&lt;Error class: unknown class&gt;</a></pre>
+        <p>Convenience for combined behavior of LoadType.REFRESH LoadState, which generally defers to <code><a href="/reference/kotlin/androidx/paging/CombinedLoadStates.html#mediator()">mediator</a></code> if it exists, but if previously was LoadState.Loading, awaits for both <code><a href="/reference/kotlin/androidx/paging/CombinedLoadStates.html#source()">source</a></code> and <code><a href="/reference/kotlin/androidx/paging/CombinedLoadStates.html#mediator()">mediator</a></code> to become LoadState.NotLoading to ensure the remote load was applied.</p>
+        <p>For use cases that require reacting to LoadState of <code><a href="/reference/kotlin/androidx/paging/CombinedLoadStates.html#source()">source</a></code> and <code><a href="/reference/kotlin/androidx/paging/CombinedLoadStates.html#mediator()">mediator</a></code> specifically, e.g., showing cached data when network loads via <code><a href="/reference/kotlin/androidx/paging/CombinedLoadStates.html#mediator()">mediator</a></code> fail, LoadStates exposed via <code><a href="/reference/kotlin/androidx/paging/CombinedLoadStates.html#source()">source</a></code> and <code><a href="/reference/kotlin/androidx/paging/CombinedLoadStates.html#mediator()">mediator</a></code> should be used directly.</p>
+      </div>
+      <div class="api-item"><a name="getRefresh()"></a><a name="setRefresh()"></a><a name="getRefresh--"></a><a name="setRefresh--"></a>
+        <div class="api-name-block">
+          <div>
+            <h3 id="refresh()">refresh</h3>
+          </div>
+        </div>
+        <pre class="api-signature no-pretty-print">val&nbsp;<a href="/reference/kotlin/androidx/paging/CombinedLoadStates.html#refresh()">refresh</a>:&nbsp;<a href="/reference/kotlin/[JVM root]/&lt;Error class: unknown class&gt;.html">&lt;Error class: unknown class&gt;</a></pre>
+        <p>Convenience for combined behavior of LoadType.REFRESH LoadState, which generally defers to <code><a href="/reference/kotlin/androidx/paging/CombinedLoadStates.html#mediator()">mediator</a></code> if it exists, but if previously was LoadState.Loading, awaits for both <code><a href="/reference/kotlin/androidx/paging/CombinedLoadStates.html#source()">source</a></code> and <code><a href="/reference/kotlin/androidx/paging/CombinedLoadStates.html#mediator()">mediator</a></code> to become LoadState.NotLoading to ensure the remote load was applied.</p>
+        <p>For use cases that require reacting to LoadState of <code><a href="/reference/kotlin/androidx/paging/CombinedLoadStates.html#source()">source</a></code> and <code><a href="/reference/kotlin/androidx/paging/CombinedLoadStates.html#mediator()">mediator</a></code> specifically, e.g., showing cached data when network loads via <code><a href="/reference/kotlin/androidx/paging/CombinedLoadStates.html#mediator()">mediator</a></code> fail, LoadStates exposed via <code><a href="/reference/kotlin/androidx/paging/CombinedLoadStates.html#source()">source</a></code> and <code><a href="/reference/kotlin/androidx/paging/CombinedLoadStates.html#mediator()">mediator</a></code> should be used directly.</p>
+      </div>
+      <div class="api-item"><a name="getSource()"></a><a name="setSource()"></a><a name="getSource--"></a><a name="setSource--"></a>
+        <div class="api-name-block">
+          <div>
+            <h3 id="source()">source</h3>
+          </div>
+        </div>
+        <pre class="api-signature no-pretty-print">val&nbsp;<a href="/reference/kotlin/androidx/paging/CombinedLoadStates.html#source()">source</a>:&nbsp;<a href="/reference/kotlin/[JVM root]/&lt;Error class: unknown class&gt;.html">&lt;Error class: unknown class&gt;</a></pre>
+        <p>LoadStates corresponding to loads from a PagingSource.</p>
+      </div>
+    </div>
+  </body>
+</html>
