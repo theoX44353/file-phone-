@@ -1,0 +1,23 @@
+toc:
+- title: "Class Index"
+  path: "/reference/androidx/classes.html"
+
+- title: "Package Index"
+  path: "/reference/androidx/packages.html"
+
+- title: "androidx.paging"
+  path: "/reference/androidx/paging/package-summary.html"
+
+  section:
+  - title: "Classes"
+
+    section:
+    - title: "CombinedLoadStates"
+      path: "/reference/androidx/paging/CombinedLoadStates.html"
+    - title: "Pager"
+      path: "/reference/androidx/paging/Pager.html"
+    - title: "PagingData"
+      path: "/reference/androidx/paging/PagingData.html"
+    - title: "PagingData.Companion"
+      path: "/reference/androidx/paging/PagingData.Companion.html"
+      
