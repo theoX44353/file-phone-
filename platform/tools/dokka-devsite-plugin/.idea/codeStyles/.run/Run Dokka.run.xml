@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Run Dokka" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="org.jetbrains.dokka.MainKt" />
+    <module name="dokka-devsite-plugin.main" />
+    <option name="PROGRAM_PARAMETERS" value="dokka.json" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
