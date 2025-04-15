@@ -1,0 +1,1 @@
+git clone --no-checkout --depth 1 git@github.com:foo/bar.git && cd bar && git show HEAD:path/to/file.txt
