@@ -1,0 +1,7 @@
+:integration-tests:cli:run
+WARN: $SRC_DIR/src/testData/androidx/paging/source/Pager.kt:46 Missing @param tag for parameter `initialKey` in DFunction Pager
+WARN: $SRC_DIR/src/testData/androidx/paging/source/Pager.kt:46 Missing @param tag for parameter `initialKey` in DFunction Pager
+WARN: $SRC_DIR/src/testData/androidx/paging/source/Pager.kt:46 Missing @param tag for parameter `pagingSourceFactory` in DFunction Pager
+WARN: $SRC_DIR/src/testData/androidx/paging/source/Pager.kt:46 Missing @param tag for parameter `pagingSourceFactory` in DFunction Pager
+WARN: $SRC_DIR/src/testData/androidx/paging/source/Pager.kt:46 Missing @param tag for parameter `remoteMediator` in DFunction Pager
+WARN: $SRC_DIR/src/testData/androidx/paging/source/Pager.kt:46 Missing @param tag for parameter `remoteMediator` in DFunction Pager
