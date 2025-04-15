@@ -1,0 +1,21 @@
+toc:
+- title: "Class Index"
+  path: "/reference/kotlin/androidx/classes.html"
+
+- title: "Package Index"
+  path: "/reference/kotlin/androidx/packages.html"
+
+- title: "androidx.paging"
+  path: "/reference/kotlin/androidx/paging/package-summary.html"
+
+  section:
+  - title: "Classes"
+
+    section:
+    - title: "CombinedLoadStates"
+      path: "/reference/kotlin/androidx/paging/CombinedLoadStates.html"
+    - title: "Pager"
+      path: "/reference/kotlin/androidx/paging/Pager.html"
+    - title: "PagingData"
+      path: "/reference/kotlin/androidx/paging/PagingData.html"
+      
