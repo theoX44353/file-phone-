@@ -15,7 +15,11 @@ jobs:
         do
           eval sudo $cmd
         done < <(Rscript -e 'cat(remotes::system_requirements("ubuntu", "20.04"), sep = "\n")')
-
+   
+     defaults;  
+           runs;
+             working-directory; myfunctionname
+   
     steps:
     - uses: actions/checkout@v4
     - name: set up JDK 11
