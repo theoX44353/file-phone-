@@ -1,0 +1,65 @@
+<html devsite="true">
+  <head>
+    <title>BinderThread</title>
+{% setvar book_path %}/reference/androidx/_book.yaml{% endsetvar %}
+{% include "_shared/_reference-head-tags.html" %}
+  </head>
+  <body>
+    <div itemscope="" itemtype="http://developers.google.com/ReferenceObject">
+      <meta itemprop="name" content="BinderThread">
+      <meta itemprop="path" content="androidx.annotation">
+      <meta itemprop="language" content="JAVA">
+    </div>
+    <div id="header-block">
+      <div>
+        <h1>BinderThread</h1>
+      </div>
+      <div id="metadata-info-block">
+        <div id="source-link"><a href="https://cs.android.com/search?q=file:androidx/annotation/BinderThread.kt+class:androidx.annotation.BinderThread&amp;ss=androidx/platform/frameworks/support" class="external">View Source</a></div>
+      </div>
+    </div>
+
+{% setvar page_path %}androidx/annotation/BinderThread.html{% endsetvar %}
+{% setvar can_switch %}1{% endsetvar %}
+{% include "reference/_java_switcher2.md" %}
+    <p>
+      <pre>@<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.annotation/-must-be-documented/index.html">MustBeDocumented</a><br>@<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.annotation/-retention/index.html">Retention</a>(value&nbsp;=&nbsp;AnnotationRetention.BINARY)<br>@<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.annotation/-target/index.html">Target</a>(allowedTargets&nbsp;=&nbsp;[AnnotationTarget.FUNCTION,&nbsp;AnnotationTarget.PROPERTY_GETTER,&nbsp;AnnotationTarget.PROPERTY_SETTER,&nbsp;AnnotationTarget.CONSTRUCTOR,&nbsp;AnnotationTarget.ANNOTATION_CLASS,&nbsp;AnnotationTarget.CLASS,&nbsp;AnnotationTarget.VALUE_PARAMETER])<br>public annotation <a href="/reference/androidx/annotation/BinderThread.html">BinderThread</a></pre>
+    </p>
+    <hr>
+    <p>Denotes that the annotated method should only be called on the binder thread. If the annotated element is a class, then all methods in the class should be called on the binder thread.</p>
+    <p>Example:</p>
+    <pre class="prettyprint">@BinderThread<br>public BeamShareData createBeamShareData() { ... }</pre>
+    <h2>Summary</h2>
+    <div class="devsite-table-wrapper">
+      <table class="responsive">
+        <colgroup>
+          <col width="40%">
+          <col>
+        </colgroup>
+        <thead>
+          <tr>
+            <th colspan="100%"><h3>Public constructors</h3></th>
+          </tr>
+        </thead>
+        <tbody class="list">
+          <tr>
+            <td>
+              <div><code><a href="/reference/androidx/annotation/BinderThread.html#BinderThread()">BinderThread</a>()</code></div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="list">
+      <h2>Public constructors</h2>
+      <div class="api-item"><a name="BinderThread--"></a><a name="binderthread"></a>
+        <div class="api-name-block">
+          <div>
+            <h3 id="BinderThread()">BinderThread</h3>
+          </div>
+        </div>
+        <pre class="api-signature no-pretty-print">public&nbsp;<a href="/reference/androidx/annotation/BinderThread.html#BinderThread()">BinderThread</a>()</pre>
+      </div>
+    </div>
+  </body>
+</html>
