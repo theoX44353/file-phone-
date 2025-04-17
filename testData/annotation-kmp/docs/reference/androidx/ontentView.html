@@ -1,0 +1,88 @@
+html devsite="true">
+  <head>
+    <title>ContentView</title>
+{% setvar book_path %}/reference/androidx/_book.yaml{% endsetvar %}
+{% include "_shared/_reference-head-tags.html" %}
+  </head>
+  <body>
+    <div itemscope="" itemtype="http://developers.google.com/ReferenceObject">
+      <meta itemprop="name" content="ContentView">
+      <meta itemprop="path" content="androidx.annotation">
+      <meta itemprop="language" content="JAVA">
+    </div>
+    <div id="header-block">
+      <div>
+        <h1>ContentView</h1>
+      </div>
+      <div id="metadata-info-block">
+        <div id="source-link"><a href="https://cs.android.com/search?q=file:androidx/annotation/ContentView.kt+class:androidx.annotation.ContentView&amp;ss=androidx/platform/frameworks/support" class="external">View Source</a></div>
+      </div>
+    </div>
+
+{% setvar page_path %}androidx/annotation/ContentView.html{% endsetvar %}
+{% setvar can_switch %}1{% endsetvar %}
+{% include "reference/_java_switcher2.md" %}
+    <p>
+      <pre>@<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.annotation/-retention/index.html">Retention</a>(value&nbsp;=&nbsp;AnnotationRetention.BINARY)<br>@<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.annotation/-target/index.html">Target</a>(allowedTargets&nbsp;=&nbsp;[AnnotationTarget.CONSTRUCTOR])<br>public annotation <a href="/reference/androidx/annotation/ContentView.html">ContentView</a></pre>
+    </p>
+    <hr>
+    <p>Annotation that can be attached to a constructor with a single <code><a href="/reference/androidx/annotation/LayoutRes.html">LayoutRes</a></code> parameter to denote what layout the component intends to inflate and set as its content.</p>
+    <p>It is strongly recommended that components that support this annotation specifically call it out in their documentation.</p>
+    <pre class="prettyprint">public class MainFragment extends Fragment {<br>    public MainFragment() {<br>        // This constructor is annotated with @ContentView<br>        super(R.layout.main);<br>    }<br>}</pre>
+    <div class="devsite-table-wrapper">
+      <table class="responsive">
+        <colgroup>
+          <col width="40%">
+          <col>
+        </colgroup>
+        <thead>
+          <tr>
+            <th colspan="100%">See also</th>
+          </tr>
+        </thead>
+        <tbody class="list">
+          <tr>
+            <td><code><a href="/reference/androidx/activity/ComponentActivity.ComponentActivity.html">ComponentActivity.ComponentActivity</a></code></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><code><a href="/reference/androidx/fragment/app/Fragment.Fragment.html">Fragment.Fragment</a></code></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <h2>Summary</h2>
+    <div class="devsite-table-wrapper">
+      <table class="responsive">
+        <colgroup>
+          <col width="40%">
+          <col>
+        </colgroup>
+        <thead>
+          <tr>
+            <th colspan="100%"><h3>Public constructors</h3></th>
+          </tr>
+        </thead>
+        <tbody class="list">
+          <tr>
+            <td>
+              <div><code><a href="/reference/androidx/annotation/ContentView.html#ContentView()">ContentView</a>()</code></div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="list">
+      <h2>Public constructors</h2>
+      <div class="api-item"><a name="ContentView--"></a><a name="contentview"></a>
+        <div class="api-name-block">
+          <div>
+            <h3 id="ContentView()">ContentView</h3>
+          </div>
+        </div>
+        <pre class="api-signature no-pretty-print">public&nbsp;<a href="/reference/androidx/annotation/ContentView.html#ContentView()">ContentView</a>()</pre>
+      </div>
+    </div>
+  </body>
+</html>
