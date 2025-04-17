@@ -1,0 +1,169 @@
+<html devsite="true">
+  <head>
+    <title>ChecksSdkIntAtLeast</title>
+{% setvar book_path %}/reference/androidx/_book.yaml{% endsetvar %}
+{% include "_shared/_reference-head-tags.html" %}
+  </head>
+  <body>
+    <div itemscope="" itemtype="http://developers.google.com/ReferenceObject">
+      <meta itemprop="name" content="ChecksSdkIntAtLeast">
+      <meta itemprop="path" content="androidx.annotation">
+      <meta itemprop="property" content="getApi()">
+      <meta itemprop="property" content="getCodename()">
+      <meta itemprop="property" content="getExtension()">
+      <meta itemprop="property" content="getLambda()">
+      <meta itemprop="property" content="getParameter()">
+      <meta itemprop="language" content="JAVA">
+    </div>
+    <div id="header-block">
+      <div>
+        <h1>ChecksSdkIntAtLeast</h1>
+      </div>
+      <div id="metadata-info-block">
+        <div id="source-link"><a href="https://cs.android.com/search?q=file:androidx/annotation/ChecksSdkIntAtLeast.kt+class:androidx.annotation.ChecksSdkIntAtLeast&amp;ss=androidx/platform/frameworks/support" class="external">View Source</a></div>
+      </div>
+    </div>
+
+{% setvar page_path %}androidx/annotation/ChecksSdkIntAtLeast.html{% endsetvar %}
+{% setvar can_switch %}1{% endsetvar %}
+{% include "reference/_java_switcher2.md" %}
+    <p>
+      <pre>@<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.annotation/-must-be-documented/index.html">MustBeDocumented</a><br>@<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.annotation/-retention/index.html">Retention</a>(value&nbsp;=&nbsp;AnnotationRetention.BINARY)<br>@<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.annotation/-target/index.html">Target</a>(allowedTargets&nbsp;=&nbsp;[AnnotationTarget.FUNCTION,&nbsp;AnnotationTarget.PROPERTY_GETTER,&nbsp;AnnotationTarget.PROPERTY_SETTER,&nbsp;AnnotationTarget.FIELD])<br>public annotation <a href="/reference/androidx/annotation/ChecksSdkIntAtLeast.html">ChecksSdkIntAtLeast</a></pre>
+    </p>
+    <hr>
+    <p>Denotes that the annotated method checks if the SDK_INT API level is at least the given value, and either returns it or executes the given lambda in that case (or if it's a field, has the value true).</p>
+    <p>The API level can be specified either as an API level via .api, or for preview platforms as a codename (such as &quot;R&quot;) via .codename}, or it can be passed in to the method; in that case, the parameter containing the API level or code name should be specified via .parameter, where the first parameter is numbered 0.</p>
+    <p>Examples:</p>
+    <pre class="prettyprint">// Simple version check<br>@ChecksSdkIntAtLeast(api = Build.VERSION_CODES.O)<br>public static boolean isAtLeastO() {<br>    return Build.VERSION.SDK_INT &gt;= 26;<br>}<br><br>// Required API level is passed in as first argument, and function<br>// in second parameter is executed if SDK_INT is at least that high:<br>@ChecksSdkIntAtLeast(parameter = 0, lambda = 1)<br>inline fun fromApi(value: Int, action: () -&gt; Unit) {<br>    if (Build.VERSION.SDK_INT &gt;= value) {<br>        action()<br>    }<br>}<br><br>// Kotlin property:<br>@get:ChecksSdkIntAtLeast(api = Build.VERSION_CODES.GINGERBREAD)<br>val isGingerbread: Boolean<br>get() = Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.GINGERBREAD<br><br>// Java field:<br>@ChecksSdkIntAtLeast(api = Build.VERSION_CODES.LOLLIPOP)<br>public static final boolean SUPPORTS_LETTER_SPACING =<br>Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.LOLLIPOP;</pre>
+    <h2>Summary</h2>
+    <div class="devsite-table-wrapper">
+      <table class="responsive">
+        <colgroup>
+          <col width="40%">
+          <col>
+        </colgroup>
+        <thead>
+          <tr>
+            <th colspan="100%"><h3>Public constructors</h3></th>
+          </tr>
+        </thead>
+        <tbody class="list">
+          <tr>
+            <td>
+              <div><code><a href="/reference/androidx/annotation/ChecksSdkIntAtLeast.html#ChecksSdkIntAtLeast(kotlin.Int,kotlin.String,kotlin.Int,kotlin.Int,kotlin.Int)">ChecksSdkIntAtLeast</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;api,<br>&nbsp;&nbsp;&nbsp;&nbsp;@<a href="/reference/androidx/annotation/NonNull.html">NonNull</a> <a href="https://developer.android.com/reference/java/lang/String.html">String</a>&nbsp;codename,<br>&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;parameter,<br>&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;lambda,<br>&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;extension<br>)</code></div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="devsite-table-wrapper">
+      <table class="responsive">
+        <colgroup>
+          <col width="40%">
+          <col>
+        </colgroup>
+        <thead>
+          <tr>
+            <th colspan="100%"><h3>Public methods</h3></th>
+          </tr>
+        </thead>
+        <tbody class="list">
+          <tr>
+            <td><code>final int</code></td>
+            <td>
+              <div><code><a href="/reference/androidx/annotation/ChecksSdkIntAtLeast.html#getApi()">getApi</a>()</code></div>
+              <p>The API level is at least the given level</p>
+            </td>
+          </tr>
+          <tr>
+            <td><code>final @<a href="/reference/androidx/annotation/NonNull.html">NonNull</a> <a href="https://developer.android.com/reference/java/lang/String.html">String</a></code></td>
+            <td>
+              <div><code><a href="/reference/androidx/annotation/ChecksSdkIntAtLeast.html#getCodename()">getCodename</a>()</code></div>
+              <p>The API level is at least the given codename (such as &quot;R&quot;)</p>
+            </td>
+          </tr>
+          <tr>
+            <td><code>final int</code></td>
+            <td>
+              <div><code><a href="/reference/androidx/annotation/ChecksSdkIntAtLeast.html#getExtension()">getExtension</a>()</code></div>
+              <p>The associated Extension SDK id, or 0 if the Android platform</p>
+            </td>
+          </tr>
+          <tr>
+            <td><code>final int</code></td>
+            <td>
+              <div><code><a href="/reference/androidx/annotation/ChecksSdkIntAtLeast.html#getLambda()">getLambda</a>()</code></div>
+              <p>The parameter number for a lambda that will be executed if the API level is at least the value supplied via <code><a href="/reference/androidx/annotation/ChecksSdkIntAtLeast.html#api()">api</a></code>, <code><a href="/reference/androidx/annotation/ChecksSdkIntAtLeast.html#codename()">codename</a></code> or <code><a href="/reference/androidx/annotation/ChecksSdkIntAtLeast.html#parameter()">parameter</a></code></p>
+            </td>
+          </tr>
+          <tr>
+            <td><code>final int</code></td>
+            <td>
+              <div><code><a href="/reference/androidx/annotation/ChecksSdkIntAtLeast.html#getParameter()">getParameter</a>()</code></div>
+              <p>The API level is specified in the given parameter, where the first parameter is number 0</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="list">
+      <h2>Public constructors</h2>
+      <div class="api-item"><a name="ChecksSdkIntAtLeast(kotlin.Int, kotlin.String, kotlin.Int, kotlin.Int, kotlin.Int)"></a><a name="ChecksSdkIntAtLeast-kotlin.Int-kotlin.String-kotlin.Int-kotlin.Int-kotlin.Int-"></a><a name="checkssdkintatleast"></a>
+        <div class="api-name-block">
+          <div>
+            <h3 id="ChecksSdkIntAtLeast(kotlin.Int,kotlin.String,kotlin.Int,kotlin.Int,kotlin.Int)">ChecksSdkIntAtLeast</h3>
+          </div>
+        </div>
+        <pre class="api-signature no-pretty-print">public&nbsp;<a href="/reference/androidx/annotation/ChecksSdkIntAtLeast.html#ChecksSdkIntAtLeast(kotlin.Int,kotlin.String,kotlin.Int,kotlin.Int,kotlin.Int)">ChecksSdkIntAtLeast</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;api,<br>&nbsp;&nbsp;&nbsp;&nbsp;@<a href="/reference/androidx/annotation/NonNull.html">NonNull</a> <a href="https://developer.android.com/reference/java/lang/String.html">String</a>&nbsp;codename,<br>&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;parameter,<br>&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;lambda,<br>&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;extension<br>)</pre>
+      </div>
+    </div>
+    <div class="list">
+      <h2>Public methods</h2>
+      <div class="api-item"><a name="getApi--"></a><a name="getapi"></a>
+        <div class="api-name-block">
+          <div>
+            <h3 id="getApi()">getApi</h3>
+          </div>
+        </div>
+        <pre class="api-signature no-pretty-print">public&nbsp;final&nbsp;int&nbsp;<a href="/reference/androidx/annotation/ChecksSdkIntAtLeast.html#getApi()">getApi</a>()</pre>
+        <p>The API level is at least the given level</p>
+      </div>
+      <div class="api-item"><a name="getCodename--"></a><a name="getcodename"></a>
+        <div class="api-name-block">
+          <div>
+            <h3 id="getCodename()">getCodename</h3>
+          </div>
+        </div>
+        <pre class="api-signature no-pretty-print">public&nbsp;final&nbsp;@<a href="/reference/androidx/annotation/NonNull.html">NonNull</a> <a href="https://developer.android.com/reference/java/lang/String.html">String</a>&nbsp;<a href="/reference/androidx/annotation/ChecksSdkIntAtLeast.html#getCodename()">getCodename</a>()</pre>
+        <p>The API level is at least the given codename (such as &quot;R&quot;)</p>
+      </div>
+      <div class="api-item"><a name="getExtension--"></a><a name="getextension"></a>
+        <div class="api-name-block">
+          <div>
+            <h3 id="getExtension()">getExtension</h3>
+          </div>
+        </div>
+        <pre class="api-signature no-pretty-print">public&nbsp;final&nbsp;int&nbsp;<a href="/reference/androidx/annotation/ChecksSdkIntAtLeast.html#getExtension()">getExtension</a>()</pre>
+        <p>The associated Extension SDK id, or 0 if the Android platform</p>
+      </div>
+      <div class="api-item"><a name="getLambda--"></a><a name="getlambda"></a>
+        <div class="api-name-block">
+          <div>
+            <h3 id="getLambda()">getLambda</h3>
+          </div>
+        </div>
+        <pre class="api-signature no-pretty-print">public&nbsp;final&nbsp;int&nbsp;<a href="/reference/androidx/annotation/ChecksSdkIntAtLeast.html#getLambda()">getLambda</a>()</pre>
+        <p>The parameter number for a lambda that will be executed if the API level is at least the value supplied via <code><a href="/reference/androidx/annotation/ChecksSdkIntAtLeast.html#api()">api</a></code>, <code><a href="/reference/androidx/annotation/ChecksSdkIntAtLeast.html#codename()">codename</a></code> or <code><a href="/reference/androidx/annotation/ChecksSdkIntAtLeast.html#parameter()">parameter</a></code></p>
+      </div>
+      <div class="api-item"><a name="getParameter--"></a><a name="getparameter"></a>
+        <div class="api-name-block">
+          <div>
+            <h3 id="getParameter()">getParameter</h3>
+          </div>
+        </div>
+        <pre class="api-signature no-pretty-print">public&nbsp;final&nbsp;int&nbsp;<a href="/reference/androidx/annotation/ChecksSdkIntAtLeast.html#getParameter()">getParameter</a>()</pre>
+        <p>The API level is specified in the given parameter, where the first parameter is number 0</p>
+      </div>
+    </div>
+  </body>
+</html>
