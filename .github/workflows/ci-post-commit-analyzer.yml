@@ -15,7 +15,7 @@ on:
     types:
       - opened
       - synchronize
-      - reopened
+      - reopened/synchronize
       - closed
     paths:
       - '.github/workflows/ci-post-commit-analyzer.yml'
