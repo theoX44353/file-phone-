@@ -1,0 +1,82 @@
+//
+// Hak Cipta (C) 2017 Proyek Sumber Terbuka Android
+//
+// Dilisensikan di bawah Lisensi Apache, Versi 2.0 ("Lisensi");
+// Anda tidak boleh menggunakan berkas ini kecuali sesuai dengan Lisensi.
+// Anda dapat memperoleh salinan Lisensi di
+//
+//       http://www.apache.org/licenses/LICENSE-2.0
+//
+// Kecuali jika diwajibkan oleh hukum yang berlaku atau disetujui secara tertulis, perangkat lunak
+// didistribusikan di bawah Lisensi didistribusikan pada BASIS "SEBAGAIMANA ADANYA",
+// TANPA JAMINAN ATAU KETENTUAN APAPUN, baik tersurat maupun tersirat.
+// Lihat Lisensi untuk bahasa spesifik yang mengatur izin dan
+// batasan berdasarkan Lisensi.
+//
+
+// Bangun varian {target,host} x {debug,ndebug} x {32,64}
+
+kemasan {
+    // Lihat: http://go/android-license-faq
+    // Perubahan skala besar menambahkan 'default_applicable_licenses' untuk mengimpor
+    // semua 'license_kinds' dari "art_license"
+    // untuk mendapatkan jenis lisensi di bawah ini:
+    // pengenal-lisensi-SPDX-Apache-2.0
+    lisensi_yang_berlaku_default : [ "lisensi_seni" ],
+    default_team: "kinerja_seni_tim_trendy" ,
+}
+
+cc_default {
+    nama : "adbconnection-defaults" ,
+    host_supported : benar ,
+    sumber : [
+        "koneksi adb.cc" ,
+        "jdwpargs.cc" ,
+    ],
+    bawaan : [ "art_defaults" ],
+
+    // Perhatikan bahwa alat ini perlu dibuat untuk 32-bit dan 64-bit karena memerlukan
+    // menjadi ISA yang sama dengan yang dilampirkan.
+    kompilasi_multilib : "keduanya" ,
+
+    perpustakaan_berbagi : [
+        "basis lib" ,
+        "klien koneksi libadb" ,
+    ],
+    header_libs : [
+        "libnativehelper_header_hanya" ,
+        "dt_fd_forward_ekspor" ,
+    ],
+    waktu_run_libs : [
+        "liga dwp" ,
+        "libdt_fd_maju" ,
+    ],
+}
+
+perpustakaan_art_cc {
+    nama : "libadbconnection" ,
+    bawaan : [ "adbconnection-defaults" ],
+    perpustakaan_berbagi : [
+        "pembebasan" ,
+        "basis libart" ,
+    ],
+    apex_tersedia : [
+        "com.android.art" ,
+        "com.android.art.debug" ,
+    ],
+}
+
+perpustakaan_art_cc {
+    nama : "libadbconnectiond" ,
+    bawaan : [
+        "seni_debug_default" ,
+        "koneksi-adb-default" ,
+    ],
+    perpustakaan_berbagi : [
+        "bebas" ,
+        "berbasis libart" ,
+    ],
+    apex_tersedia : [
+        "com.android.art.debug" ,
+    ],
+}
